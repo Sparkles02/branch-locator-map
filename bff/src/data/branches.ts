@@ -198,5 +198,191 @@ export const branchData: Branch []= [
       "saturday": { "open": "08:30", "close": "12:00" },
       "sunday": null
     }
-  }
+  },
+  {
+    "id": "ZA-BFN-006",
+    "name": "Westdene Mall Branch",
+    "code": "051006",
+    "type": "Full Service Branch",
+    "status": "active",
+    "location": {
+      "latitude": -29.1219,
+      "longitude": 26.2140,
+      "address": "Westdene Mall, Nelson Mandela Dr",
+      "suburb": "Westdene",
+      "city": "Bloemfontein",
+      "postal_code": "9301"
+    },
+    "contact": {
+      "phone": "+27515300000",
+      "email": "westdene@banklocal.co.za"
+    },
+    "amenities": {
+      "has_atm": true,
+      "has_forex": false,
+      "wheelchair_accessible": true,
+      "has_parking": true,
+      "instant_card_printing": true
+    },
+    "operating_hours": {
+      "weekday": { "open": "08:30", "close": "16:00" },
+      "saturday": { "open": "08:30", "close": "12:00" },
+      "sunday": null
+    }
+},
+{
+    "id": "ZA-ELN-007",
+    "name": "Berea Mall Branch",
+    "code": "051007",
+    "type": "Digital Hub",
+    "status": "active",
+    "location": {
+      "latitude": -32.9858,
+      "longitude": 27.8915,
+      "address": "Berea Mall, Western Ave",
+      "suburb": "Berea",
+      "city": "East London",
+      "postal_code": "5241"
+    },
+    "contact": {
+      "phone": "+27437210000",
+      "email": "berea@banklocal.co.za"
+    },
+    "amenities": {
+      "has_atm": true,
+      "has_forex": false,
+      "wheelchair_accessible": true,
+      "has_parking": true,
+      "instant_card_printing": false
+    },
+    "operating_hours": {
+      "weekday": { "open": "09:00", "close": "17:00" },
+      "saturday": { "open": "09:00", "close": "13:00" },
+      "sunday": null
+    }
+},
+{
+    "id": "ZA-PLK-008",
+    "name": "Mall of the North Branch",
+    "code": "051008",
+    "type": "Full Service Branch",
+    "status": "active",
+    "location": {
+      "latitude": -23.8962,
+      "longitude": 29.4486,
+      "address": "Mall of the North, Hans van Rensburg St",
+      "suburb": "Polokwane Central",
+      "city": "Polokwane",
+      "postal_code": "0699"
+    },
+    "contact": {
+      "phone": "+27152910000",
+      "email": "mallnorth@banklocal.co.za"
+    },
+    "amenities": {
+      "has_atm": true,
+      "has_forex": true,
+      "wheelchair_accessible": true,
+      "has_parking": true,
+      "instant_card_printing": true
+    },
+    "operating_hours": {
+      "weekday": { "open": "08:30", "close": "16:00" },
+      "saturday": { "open": "08:30", "close": "12:00" },
+      "sunday": { "open": "09:00", "close": "12:00" }
+    }
+},
+{
+    "id": "ZA-NBM-009",
+    "name": "The Crossing Branch",
+    "code": "051009",
+    "type": "Full Service Branch",
+    "status": "active",
+    "location": {
+      "latitude": -25.4753,
+      "longitude": 30.9694,
+      "address": "Crossing Shopping Centre, Madiba Drive",
+      "suburb": "Mbombela Central",
+      "city": "Mbombela",
+      "postal_code": "1200"
+    },
+    "contact": {
+      "phone": "+27137520000",
+      "email": "crossing@banklocal.co.za"
+    },
+    "amenities": {
+      "has_atm": true,
+      "has_forex": false,
+      "wheelchair_accessible": true,
+      "has_parking": true,
+      "instant_card_printing": true
+    },
+    "operating_hours": {
+      "weekday": { "open": "08:30", "close": "17:00" },
+      "saturday": { "open": "09:00", "close": "13:00" },
+      "sunday": null
+    }
+},
+{
+    "id": "ZA-KIM-010",
+    "name": "Diamond Pavilion Branch",
+    "code": "051010",
+    "type": "Digital Hub",
+    "status": "active",
+    "location": {
+      "latitude": -28.7282,
+      "longitude": 24.7499,
+      "address": "Diamond Pavilion Mall, Transvaal Rd",
+      "suburb": "Kimberley Central",
+      "city": "Kimberley",
+      "postal_code": "8301"
+    },
+    "contact": {
+      "phone": "+27538310000",
+      "email": "diamond@banklocal.co.za"
+    },
+    "amenities": {
+      "has_atm": true,
+      "has_forex": false,
+      "wheelchair_accessible": false,
+      "has_parking": true,
+      "instant_card_printing": false
+    },
+    "operating_hours": {
+      "weekday": { "open": "09:00", "close": "16:00" },
+      "saturday": { "open": "09:00", "close": "12:00" },
+      "sunday": null
+    }
+},
+{
+    "id": "ZA-MHK-011",
+    "name": "Mega City Branch",
+    "code": "051011",
+    "type": "Full Service Branch",
+    "status": "active",
+    "location": {
+      "latitude": -25.8553,
+      "longitude": 25.6441,
+      "address": "Mega City Shopping Centre, University Dr",
+      "suburb": "Mahikeng Central",
+      "city": "Mahikeng",
+      "postal_code": "2745"
+    },
+    "contact": {
+      "phone": "+27184810000",
+      "email": "megacity@banklocal.co.za"
+    },
+    "amenities": {
+      "has_atm": true,
+      "has_forex": false,
+      "wheelchair_accessible": true,
+      "has_parking": true,
+      "instant_card_printing": false
+    },
+    "operating_hours": {
+      "weekday": { "open": "08:30", "close": "16:00" },
+      "saturday": { "open": "08:30", "close": "12:00" },
+      "sunday": null
+    }
+}
 ]

@@ -1,0 +1,26 @@
+.branch-card {
+  padding: 14px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  background-color: #fff;
+}
+
+.branch-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: #00539f;
+}
+
+.branch-card h3 {
+  font-size: 0.95rem;
+  color: #00539f;
+  margin-bottom: 4px;
+}
+
+.branch-card p {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 2px;
+}

@@ -1,10 +1,12 @@
+import './FilterBar.css'
+
 interface FilterBarProps {
   onFilterChange: (openNow: boolean) => void
 }
 
 function FilterBar({ onFilterChange }: FilterBarProps) {
   return (
-    <div>
+    <div className="filter-bar">
       <label>
         <input
           type="checkbox"
