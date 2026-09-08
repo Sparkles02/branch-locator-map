@@ -18,3 +18,22 @@
   height: 16px;
   accent-color: #00539f;
 }
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location-btn {
+  background-color: #00539f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.location-btn:hover {
+  background-color: #003f7a;
+}

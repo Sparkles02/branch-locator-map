@@ -2,9 +2,10 @@ import './FilterBar.css'
 
 interface FilterBarProps {
   onFilterChange: (openNow: boolean) => void
+  onGetLocation: () => void
 }
 
-function FilterBar({ onFilterChange }: FilterBarProps) {
+function FilterBar({ onFilterChange, onGetLocation }: FilterBarProps) {
   return (
     <div className="filter-bar">
       <label>
@@ -14,6 +15,9 @@ function FilterBar({ onFilterChange }: FilterBarProps) {
         />
         Open Now
       </label>
+      <button className="location-btn" onClick={onGetLocation}>
+        Find My Location
+      </button>
     </div>
   )
 }

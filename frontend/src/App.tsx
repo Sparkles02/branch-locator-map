@@ -9,12 +9,15 @@ import FilterBar from "./components/Filters/FilterBar"
 import BranchDetails from "./components/Sidebar/BranchDetails"
 import './components/Sidebar/Sidebar.css'
 import './components/states.css'
+import useGeolocation from "./hooks/useGeolocation"
+import { calculateDistance } from "./services/api"
 
 function App() {
   const { branches, loading, error } = useBranches();
   const [searchQuery, setSearchQuery] = useState('');
   const [openNow, setOpenNow] = useState(false);
   const [selectedBranch, setSelectedBranch] = useState<Branch | null>(null)
+  const { location, error: geoError, getLocation } = useGeolocation();
 
 
   if (loading) {
@@ -47,12 +50,27 @@ function App() {
   ? filteredBranches.filter((branch) => isOpenNow(branch))
   : filteredBranches
 
+  const branchesWithDistance = location
+  ? visibleBranches
+      .map((branch) => ({
+        ...branch,
+        distance: calculateDistance(
+          location.lat,
+          location.lng,
+          branch.location.latitude,
+          branch.location.longitude
+        )
+      }))
+      .sort((a, b) => a.distance - b.distance)
+  : visibleBranches
+
   return (
     <div style={{ display: 'flex', height: '100vh' }}>
       <div className="sidebar">
         <div className="sidebar-header">
           <h1>Branch Locator</h1>
           <p>Find your nearest branch</p>
+          {geoError && <p>{geoError}</p>}
         </div>
         <div className="sidebar-content">
           {selectedBranch ? (
@@ -60,14 +78,14 @@ function App() {
           ) : (
             <>
               <SearchBar onSearch={setSearchQuery} />
-              <FilterBar onFilterChange={setOpenNow} />
-              <BranchList branches={visibleBranches} onSelect={setSelectedBranch} />
+              <FilterBar onFilterChange={setOpenNow} onGetLocation={getLocation} />
+              <BranchList branches={branchesWithDistance} onSelect={setSelectedBranch} />
             </>
           )}
         </div>
       </div>
       <div style={{ flex: 1 }}>
-        <MapView branches={visibleBranches} />
+        <MapView branches={branchesWithDistance} />
       </div>
     </div>
   ) 

@@ -12,6 +12,7 @@ function BranchCard({ branch, onSelect }: BranchCardProps) {
             <h3>{branch.name}</h3>
             <p>{branch.type}</p>
             <p>{branch.location.address}, {branch.location.suburb}</p>
+            {branch.distance !== undefined && (<p>{branch.distance.toFixed(1)} km away</p>)}
             <p>{branch.contact.phone}, {branch.contact.email}</p>
         </div>
     )

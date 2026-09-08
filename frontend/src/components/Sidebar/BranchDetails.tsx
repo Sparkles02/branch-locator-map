@@ -14,8 +14,13 @@ function BranchDetails({ branch, onClose }: BranchDetailsProp) {
                 <h2>{branch.name}</h2>
             </div>
 
+            <h3>Address</h3>
+            <p>{branch.location.address}</p>
+            <p>{branch.location.suburb}, {branch.location.city}, {branch.location.postal_code}</p>
+            <a href={`https://www.google.com/maps/dir/?api=1&destination=${branch.location.latitude},${branch.location.longitude}`} target="_blank" rel="noreferrer"> Get Directions</a>
+
             <h3>Contact</h3>
-            <p>{branch.contact.phone}</p>
+            <a href={`tel:${branch.contact.phone}`}>{branch.contact.phone}</a>
             <p>{branch.contact.email}</p>
 
             <h3>Opening Hours</h3>
