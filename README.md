@@ -18,6 +18,7 @@ A map-based web application for customers to find their nearest bank branch, vie
 
 ## Project Structure
 
+```
 branch-locator-map/
 ├── frontend/         # React + TypeScript frontend
 │   ├── src/
@@ -32,6 +33,18 @@ branch-locator-map/
 │   │   └── data/
 │   └── Dockerfile
 └── docker-compose.yml
+```
+
+## Running with Docker
+
+From the root of the project:
+
+```bash
+docker-compose up --build
+```
+
+- Frontend: http://localhost:80
+- BFF: http://localhost:3001
 
 ## Running Locally (without Docker)
 
@@ -41,27 +54,28 @@ branch-locator-map/
 cd bff
 npm install
 npm run dev
+```
 
 BFF runs on http://localhost:3001
 
-Frontend
+### Frontend
 
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 Frontend runs on http://localhost:5173
 
-Running with Docker
+## Running Tests
 
-From the root of the project:
+```bash
+cd frontend
+npm test
+```
 
-docker-compose up --build
-
-- Frontend: http://localhost:80
-- BFF: http://localhost:3001
-
-Features
+## Features
 
 - Interactive map with branch markers
 - Responsive branch list and sidebar
@@ -77,12 +91,9 @@ Features
 - Geolocation denied handling
 - Fully containerised with Docker
 
-API Endpoints
+## API Endpoints
 
-┌────────┬───────────────────┬───────────────────────────────┐
-│ Method │     Endpoint      │          Description          │
-├────────┼───────────────────┼───────────────────────────────┤
-│ GET    │ /api/branches     │ Returns all branches          │
-├────────┼───────────────────┼───────────────────────────────┤
-│ GET    │ /api/branches/:id │ Returns a single branch by ID │
-└────────┴───────────────────┴───────────────────────────────┘
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/branches | Returns all branches |
+| GET | /api/branches/:id | Returns a single branch by ID |
