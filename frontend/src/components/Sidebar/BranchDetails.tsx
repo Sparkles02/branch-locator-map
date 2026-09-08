@@ -1,5 +1,6 @@
 import type { Branch } from "../../types/branch"
 import './BranchDetails.css'
+import { isOpenNow } from "../../services/api"
 
 interface BranchDetailsProp {
     branch: Branch;
@@ -7,11 +8,15 @@ interface BranchDetailsProp {
 }
 
 function BranchDetails({ branch, onClose }: BranchDetailsProp) { 
+    const open = isOpenNow(branch)
     return (
         <div className="branch-details">
             <div className="branch-details-header">
                 <button onClick={onClose} className="close-btn">Close</button>
                 <h2>{branch.name}</h2>
+                <span className={open ? 'badge-open' : 'badge-closed'}>
+                {open ? 'Open' : 'Closed'}
+                </span>
             </div>
 
             <h3>Address</h3>
